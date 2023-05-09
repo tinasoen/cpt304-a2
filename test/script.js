@@ -33,7 +33,7 @@ function setWeatherInfo(lat, long, name) {
         .then((response) => response.json())
         .then((data) => {
             var weatherArea = document.getElementById("weatherArea");
-            weatherArea.innerHTML = "Current weather in " + name;
+            weatherArea.innerHTML = "Weather in " + name;
             document.getElementById("weatherMain").innerHTML = data["weather"][0]["main"] + " (" + data["weather"][0]["description"] + ")"; 
             document.getElementById("weatherHumidity").innerHTML = "Humidity: " + data["main"]["humidity"] + "%";
             document.getElementById("weatherTemperature").innerHTML = "Temperature: " + (parseFloat(data["main"]["temp"])-273.15).toFixed(2).toString() + "°C";
