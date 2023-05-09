@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Travello</title>
+    <script src="./script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <div class="container-xxl">
+        <h1 class="display-1 text-center">Travello</h1>
+        <p class="text-center">Your Holiday Destination Partner!</p>
+        <div class="container-fluid bg-light p-5">
+            <h2>Search</h2>
+            <form>
+                <div class="row">
+                    <div class="col">
+                      <select class="form-select" aria-label="Country" name="country" id="country">
+                        
+                      </select>
+                    </div>
+
+                    <div id="subdivisionBox" class="col">
+                      <select class="form-select" aria-label="subdivision" name="subdivision" id="subdivision">
+                      </select>
+                    </div>
+                    <div class="col">
+                        <select class="form-select" aria-label="Year" name="year" id="year">
+                            
+                        </select>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-warning" onclick="getHolidays()">Search</button>
+                    </div>
+                  </div>
+            </form>
+        </div>
+        <div class="container-fluid bg-light mt-5 mb-5" id="dayInfo" style="display: none;">
+          <div class="row p-5" >
+            <div class="col">
+              <h5 id="weatherArea">Current weather in ...</h5>
+              <p id="weatherMain"></p>
+              <p id="weatherHumidity"></p>
+              <p id="weatherTemperature"></p>
+              <p id="weatherWindspeed"></p>
+            </div>
+            <div class="col">
+              <h5 id="placesToStay">Places to Stay</h5>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid bg-light p-5 mt-5">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Day</th>
+                <th scope="col">Name</th>
+              </tr>
+            </thead>
+            <tbody id="holidays">
+              
+            </tbody>
+          </table>
+        </div>
+    </div>
+  </body>
+</html>
